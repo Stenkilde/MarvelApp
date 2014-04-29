@@ -1,0 +1,11 @@
+.app {
+	width: 100%;
+}
+
+.canv {
+	width: 100%;
+	transition: 0.3s margin ease-in-out;
+	&.is-open {
+		margin-left: 320px;
+	}
+}

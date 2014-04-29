@@ -1,0 +1,36 @@
+.off-canvas-menu {
+	// Let's start out with a little bit of ul reset.
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	
+	// Let's create some nice styling for our off-canvas so it actually works!
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 310px;
+	height: 100vh;
+	background: $marvel-red;
+	
+	transition: 0.3s transform ease-in-out;
+	transform: translateX(-310px);
+	.menu-item {	
+		background: $marvel-red-dark;
+		line-height: 50px;
+		border-top: #bd0f18 1px solid;
+		border-bottom: #bd0f18 1px solid;
+		padding-left: 20px;
+		transition: background 0.2s ease;
+		&:hover {
+			background: $marvel-red-alternative-dark;
+		}
+		a {
+			width: 100%;
+			display: block;
+			color: #fff;
+		}
+	}
+	&.is-open {
+		transform: translateX(0);
+	}
+}

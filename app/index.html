@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="marvelApp"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Innovita - Marvel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <base href="/">
+    <!-- build:css(.tmp) css/styles.css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<!-- As this app is really simple, we load our controller on body. Thats also why we call it "main" -->
+<body ng-controller="mainController">
+
+    <div class="app">
+
+        <ul class="off-canvas-menu">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#heroes">Heroes</a></li>
+            <li class="menu-item"><a href="#villains">Villains</a></li>
+            <li class="menu-item"><a href="#organizations">Organization</a></li>
+            <li class="menu-item"><a href="#help">Help</a></li>
+            <li class="menu-item"><a href="#about">About</a></li>
+        </ul>
+        <div class="canv">
+            <header class="header">
+                <div class="small-12 large-2 columns">
+                    <a href="#" class="mobile-trigger">Menu</a>
+                </div>
+                <div class="small-12 large-10 columns">
+                </div>
+            </header>
+
+            <div ng-view></div>
+        </div>
+
+    </div>
+
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.0-beta.7/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js scripts/foundation.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+</body>
+</html>
