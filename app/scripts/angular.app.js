@@ -49,22 +49,27 @@
 
 	// create the controller and inject Angular's $scope
 	marvelApp.controller('mainController', function($scope) {
+		$scope.pageClass = 'page-home';
 		$scope.message = 'So you want to know about Superheroes and the enemies?';
 	});
 
 	marvelApp.controller('heroesController', function($scope) {
-		$scope.message = 'I HERO TEXT';
+		$scope.pageClass = 'page-heroes';
+		$scope.message = 'Steffen er en faggot';
 	});
 
 	marvelApp.controller('villainsController', function($scope) {
+		$scope.pageClass = 'page-villains';
 		$scope.message = 'YOURE A Turd';
 	});
 
 	marvelApp.controller('organizationController', function($scope) {
+		$scope.pageClass = 'page-organization';
 		$scope.message = 'YOURE A nurd';
 	});
 
 	marvelApp.controller('helpController', function($scope) {
+		$scope.pageClass = 'page-help';
 		$scope.message = 'YOURE A noob';
 	});
 
