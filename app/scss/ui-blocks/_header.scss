@@ -1,0 +1,18 @@
+.header {
+	position: fixed;
+	background: #cecece;
+	width: 100%;
+	line-height: 50px;
+	transform: translateX(0);
+	transition: transform 0.3s ease-in-out;
+	&.is-open {
+		transform: translateX(300px);
+	}
+	@media #{$medium-up} {
+		display: none;
+	}
+}
+
+.mobile-trigger {
+	padding: 25px;
+}

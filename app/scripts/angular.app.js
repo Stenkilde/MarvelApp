@@ -1,7 +1,7 @@
 // Angular App
 
 	// create the module and name it marvelApp
-	var marvelApp = angular.module('marvelApp', ['ngRoute']);
+	var marvelApp = angular.module('marvelApp', ['ngRoute', 'ngAnimate']);
 
 	// Here we will create our routing
 	marvelApp.config(function($routeProvider, $locationProvider) {
@@ -49,30 +49,29 @@
 
 	// create the controller and inject Angular's $scope
 	marvelApp.controller('mainController', function($scope) {
-		$scope.pageClass = 'page-home';
 		$scope.message = 'So you want to know about Superheroes and the enemies?';
 	});
 
 	marvelApp.controller('heroesController', function($scope) {
-		$scope.pageClass = 'page-heroes';
-		$scope.message = 'Steffen er en faggot';
+		$scope.message = '123456';
 	});
 
 	marvelApp.controller('villainsController', function($scope) {
-		$scope.pageClass = 'page-villains';
 		$scope.message = 'YOURE A Turd';
 	});
 
 	marvelApp.controller('organizationController', function($scope) {
-		$scope.pageClass = 'page-organization';
 		$scope.message = 'YOURE A nurd';
 	});
 
 	marvelApp.controller('helpController', function($scope) {
-		$scope.pageClass = 'page-help';
 		$scope.message = 'YOURE A noob';
+		$scope.heading = '123';
+		$scope.content = '456';
 	});
 
 	marvelApp.controller('aboutController', function($scope) {
 		$scope.message = 'YOURE A NERD';
+		$scope.heading = '123';
+		$scope.content = '456';
 	});

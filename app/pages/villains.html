@@ -1,2 +1,55 @@
-<h1>Villains Page</h1>
-<h3>{{message}}</h3>
+<div class="page-heading">
+	<h1>Villains Page</h1>
+	<p>{{message}}</p>
+</div>
+
+<input type="seach" class="search-field" placeholder="Just search wild!" ng-model="search">
+
+<div class="heroList" ng-controller="villainList">
+	<div class="list-item" ng-repeat="villain in villains | filter:search">
+		<div class="small-12 large-3 columns">
+			<h4>Name:</h4>
+			<p>{{villain.name}}</p>
+			<p>{{villain.realName}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Born:</h4>
+			<p>{{villain.born}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Comic:</h4>
+			<p>{{villain.comic}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Universe:</h4>
+			<p>{{villain.universe}}</p>
+		</div>
+		<div class="small-12 columns description">
+			<h4>Description:</h4>
+			<p>{{villain.description}}</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	var villainList = function ($scope) {
+		$scope.villains = [
+			{
+				name: "Ultron", 
+				realName: "Ultron", 
+				born: "Built by Henry Pym", 
+				description: "Ultron-1 was constructed by Dr. Hank Pym of the Avengers as the famed scientist/adventurer was experimenting in high-intelligence robotics. Ultron became sentient and rebelled, hypnotizing Pym and brainwashing him into forgetting that Ultron had ever existed. He immediately began improving upon his rudimentary design, quickly upgrading himself several times to become Ultron-5. He then went on to organize the second incarnation of the Masters of Evil under the guise of the Crimson Cowl, and battled Pym and his teammates in the Avengers.", 
+				comic: "Avengers, Age of Ultron", 
+				universe: "Earth 616"
+			},
+			{
+				name: "Loki", 
+				realName: "Loki Laufeyson",
+				born: "", 
+				description: "", 
+				comic: "Thor, Avengers", 
+				universe: "Earth 616"
+			},
+		];
+	};
+</script>

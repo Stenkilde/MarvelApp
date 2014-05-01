@@ -3,9 +3,33 @@
 }
 
 .canv {
-	width: 100%;
-	transition: 0.3s margin ease-in-out;
-	&.is-open {
-		margin-left: 320px;
+	@include grid-row();
+	position: relative;
+	margin-left: 0;
+	transition: 0.3s transform ease-in-out;
+	@media #{$medium-up} {
+		width: 80%;
+		transform: translateX(25%);
 	}
+	&.is-open {
+		transform: translateX(80%);
+	}
+}
+
+.page {
+	padding: 0 20px;
+	margin-top: 50px;
+}
+
+.collapsed {
+	padding: 0;
+}
+
+.page-heading {
+	padding-left: 20px;
+	width: 100%;
+}
+
+.content {
+	padding: 0 20px;
 }

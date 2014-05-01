@@ -3,7 +3,6 @@ $(document).ready(function() {
 	
     // This controls the off-canv menu
     $('.mobile-trigger').click(function () {
-    	$('.off-canvas-menu').toggleClass('is-open');
-    	$('.canv').toggleClass('is-open');
+    	$('.off-canvas-menu, .canv').toggleClass('is-open');
     });
 });

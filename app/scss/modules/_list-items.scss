@@ -1,0 +1,22 @@
+.heroList {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;  
+}
+
+.list-item {
+	@include grid-row();
+	background-color: #cecece;
+	border-bottom: 2px solid #d8e0e8;
+	padding: 15px;
+	h4 {
+		font-size: 18px;
+	}
+	p {
+		margin: 5px 0 0 0;
+		font-size: 14px;
+	}
+	.description {
+		margin-top: 25px;
+	}
+}

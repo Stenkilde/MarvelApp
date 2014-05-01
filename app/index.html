@@ -21,7 +21,6 @@
 <body ng-controller="mainController">
 
     <div class="app">
-
         <ul class="off-canvas-menu">
             <li class="menu-item"><a href="#">Home</a></li>
             <li class="menu-item"><a href="#heroes">Heroes</a></li>
@@ -32,18 +31,14 @@
         </ul>
         <div class="canv">
             <header class="header">
-                <div class="small-12 large-2 columns">
-                    <a href="#" class="mobile-trigger">Menu</a>
-                </div>
-                <div class="small-12 large-10 columns">
+                <div class="large-12 columns collapsed">
+                    <a href="" class="mobile-trigger">Menu</a>
                 </div>
             </header>
-
-            <div class="page {{page-class}}" ng-view></div>
+            <div class="page large-12 columns collapsed" ng-view></div>
         </div>
 
     </div>
-
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -57,6 +52,10 @@
 
     <!-- build:js scripts/angular-route.js -->
     <script src="scripts/angular-route.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/angular-animate.js -->
+    <script src="scripts/angular-animate.js"></script>
     <!-- endbuild -->
     
     <!-- build:js scripts/foundation.js -->

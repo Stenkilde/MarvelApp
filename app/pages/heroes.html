@@ -1,2 +1,64 @@
-<h1>Heroes Page</h1>
-<h3>{{message}}</h3>
+<div class="page-heading">
+	<h1>Heroes Page</h1>
+	<p>{{message}}</p>
+</div>
+
+
+<input type="seach" class="search-field" placeholder="Just search wild!" ng-model="search">
+
+<div class="heroList" ng-controller="heroList">
+	<div class="list-item" ng-repeat="hero in heroes | filter:search">
+		<div class="small-12 large-3 columns">
+			<h4>Name:</h4>
+			<p>{{hero.name}}</p>
+			<p>{{hero.realName}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Born:</h4>
+			<p>{{hero.born}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Comic:</h4>
+			<p>{{hero.comic}}</p>
+		</div>
+		<div class="small-12 large-3 columns">
+			<h4>Universe:</h4>
+			<p>{{hero.universe}}</p>
+		</div>
+		<div class="small-12 columns description">
+			<h4>Description:</h4>
+			<p>{{hero.description}}</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	var heroList = function ($scope) {
+		$scope.heroes = [
+			{
+				name: "Captain America", 
+				realName: "Steve Rogers", 
+				born: "1920 July 4", 
+				description: "Captain America is an American fictional character, a superhero who appears in comic books published by Marvel Comics. The character first appeared in Captain America Comics #1 (cover-dated March 1941) from Marvel Comics' 1940s predecessor, Timely Comics, and was created by Joe Simon and Jack Kirby. As of 2007, an estimated 210 million copies of 'Captain America' comic books had been sold in 75 countries. For nearly all of the character's publication history, Captain America has been the alter ego of Steve Rogers, a frail young man who was enhanced to the peak of human perfection by an experimental serum, in order to aid the United States government's imminent efforts in World War II. Captain America wears a costume that bears an American flag motif, and is armed with a nearly indestructible shield that can be used for defense and can also be thrown as a weapon.", 
+				comic: "Captain America, Avengers", 
+				universe: "Earth 616"
+			},
+			{
+				name: "Thor", 
+				realName: "Thor Odinson",
+				born: "1920 July 4", 
+				description: "Thor is the blood-son of Odin, All-Father of the Asgardians, and Jord, who was also known as Gaea, the goddess who was one of the Elder Gods. Odin sought to father a son whose power would derive from both Asgard and Midgard (as the Earth realm is called by Asgardians), and hence he sought to mate with Jord. Odin created a cave in Norway where Jord gave birth to Thor. Months after the infant Thor was weaned, Odin brought him to Asgard to be raised. Odin's wife, the goddess Frigga, acted as Thor's mother from that time onward. Not until many decades later did Thor learn that Jord was his birth mother.", 
+				comic: "Thor, Avengers", 
+				universe: "Earth 616"
+			},
+		];
+	};
+</script>
+
+
+
+<!-- hero template -->
+<!--
+{name: "", born: "", description: "", comic: "", universe: ""}
+
+-->

@@ -1,7 +1,3 @@
-.mobile-trigger {
-	display: block;
-}
-
 .off-canvas-menu {
 	// Let's start out with a little bit of ul reset.
 	margin: 0;
@@ -9,15 +5,20 @@
 	list-style-type: none;
 	
 	// Let's create some nice styling for our off-canvas so it actually works!
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 310px;
+	z-index: 100;
+	width: 80%;
 	height: 100vh;
 	background: $marvel-red;
 	
 	transition: 0.3s transform ease-in-out;
-	transform: translateX(-310px);
+	transform: translateX(-1000px);
+	@media #{$medium-up} {
+		width: 20%;
+		transform: translateX(0);
+	}
 	.menu-item {	
 		background: $marvel-red-dark;
 		line-height: 50px;
