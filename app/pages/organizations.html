@@ -6,45 +6,39 @@
 <input type="seach" class="search-field" placeholder="Just search wild!" ng-model="search">
 
 <div class="heroList" ng-controller="organizationList">
-	<div class="list-item" ng-repeat="organization in organizations | filter:search">
+	<div class="list-item" ng-repeat="team in teams | filter:search">
 		<div class="small-12 large-3 columns">
 			<h4>Name:</h4>
-			<p>{{organization.name}}</p>
-		</div>
-		<div class="small-12 large-3 columns">
-			<h4>Created:</h4>
-			<p>{{organization.created}}</p>
+			<p>{{team.name}}</p>
 		</div>
 		<div class="small-12 large-3 columns">
 			<h4>Comic:</h4>
-			<p>{{organization.comic}}</p>
+			<p>{{team.comic}}</p>
 		</div>
 		<div class="small-12 large-3 columns">
 			<h4>Universe:</h4>
-			<p>{{organization.universe}}</p>
+			<p>{{team.universe}}</p>
 		</div>
 		<div class="small-12 columns description">
 			<h4>Description:</h4>
-			<p>{{organization.description}}</p>
+			<p>{{team.description}}</p>
 		</div>
 	</div>
 </div>
 
 <script>
 	var organizationList = function ($scope) {
-		$scope.heroes = [
+		$scope.teams = [
 			{
-				name: "", 
-				created: "", 
-				description: "", 
-				comic: "", 
+				name: "S.H.I.E.LD - Strategic Homeland Intervention Enforcement and Logistics Division", 
+				description: "Founded to combat technologically advanced threats on world security (specifically the menace of Hydra), S.H.I.E.L.D. has, throughout the years, remained on the front lines fighting terrorism and extraterrestrial menaces as an international intelligence agency.", 
+				comic: "Avengers and a lot of others regarding aliens", 
 				universe: "Earth 616"
 			},
 			{
-				name: "", 
-				created: "", 
-				description: "", 
-				comic: "", 
+				name: "HYDRA", 
+				description: "During the earliest recorded days of human history, a group of Egyptians, led by a man named Imhotep, fought back a Brood invasion. Spurred by this, the survivors formed two secret organizations - the Brotherhood of the Shield and the Brotherhood of the Spear. The Brotherhood of the Spear spread out, ingraining itself into all facets of human society - science, magic, politics - like a multi-headed beast, apparently destroyed around the time of the French Revolution. And although it went by many names - the Cathari sect, the Thule Society and all its antecedents - it is under the name of the many-headed Hydra that it is most well-known.", 
+				comic: "Captain America, and Avengers", 
 				universe: "Earth 616"
 			},
 		];

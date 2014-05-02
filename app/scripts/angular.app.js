@@ -49,29 +49,30 @@
 
 	// create the controller and inject Angular's $scope
 	marvelApp.controller('mainController', function($scope) {
-		$scope.message = 'So you want to know about Superheroes and the enemies?';
+		$scope.message = 'So you want to know about MCU? I got you covered!';
 	});
 
 	marvelApp.controller('heroesController', function($scope) {
-		$scope.message = '123456';
+		$scope.message = 'These are the most important heroes / good characters in the MCU';
 	});
 
 	marvelApp.controller('villainsController', function($scope) {
-		$scope.message = 'YOURE A Turd';
+		$scope.message = 'These are the most important villains / evil characters in the MCU';
 	});
 
 	marvelApp.controller('organizationController', function($scope) {
-		$scope.message = 'YOURE A nurd';
+		$scope.message = 'This is a small list of the few teams(organizations) we have in the MCU';
 	});
 
 	marvelApp.controller('helpController', function($scope) {
-		$scope.message = 'YOURE A noob';
-		$scope.heading = '123';
-		$scope.content = '456';
+		$scope.message = 'This place will be a list of things to lead you on your way of navigating and using the site';
+		$scope.heading = "Documentation";
+		$scope.content = "So, to start help you using my webApp, I would like to tell you quickly what it's all about";
 	});
 
 	marvelApp.controller('aboutController', function($scope) {
-		$scope.message = 'YOURE A NERD';
-		$scope.heading = '123';
-		$scope.content = '456';
+		$scope.message = 'Why did I create this?';
+		$scope.heading = "My name is Oliver, and I love Marvel! I'm a huge fan of the MCU.";
+		$scope.content = 'I created this webApp to help others understand what I think of the MCU';
+		$scope.contact = 'My contact info is the following ......';
 	});
